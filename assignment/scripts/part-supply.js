@@ -82,58 +82,59 @@ console.log(zeroes);
 //    'stretchNegatives', and 'stretchZeroes'. 
 console.log('7. Looping through supplyChanges to populate more arrays with positive, negative, and zero values:');
 
-supplyChanges = [-5, 3, 5, -6, 0, 7, 11];
+/*
+supplyChanges = [3, 5, -6, 0, 7, 11];
 
-let stretchpositives=[];
-let stretchnegatives=[];
-let stretchzeroes=[];
+let stretchPositives=[];
+let stretchNegatives=[];
+let stretchZeroes=[];
 
 
 for (values of supplyChanges){
   if(values > 0){
-    stretchpositives.push(values);
-    console.log(stretchpositives);
+    stretchPositives.push(values);
+    //console.log(stretchpositives);
 
 
-  } else if(supplyChanges < 0){
-    stretchnegatives.push(values);
-    console.log(stretchnegatives);
+  } else if(values < 0){
+    stretchNegatives.push(values);
+    //console.log(stretchnegatives);
 
 
-  } else if(supplyChanges === 0){
-    stretchzeroes.push(values);
-    console.log(stretchzeroes);
+  } else if(values === 0){
+    stretchZeroes.push(values);
+    //console.log(stretchzeroes);
 
   }
 }
 
-console.log(stretchpositives);
-console.log(stretchnegatives);
-console.log(stretchzeroes);
+console.log(stretchPositives);
+console.log(stretchNegatives);
+console.log(stretchZeroes);
 
+*/
 
 // 8. Create a variable called 'totalParts' and assign it a value of 0.
 //    Then, write a loop that adds each value of the 'supplyChanges'
 //    array to the 'totalParts' variable.
 console.log('8. Looping through supplyChanges to calculate the sum:');
 
-var supplyChangesInt = [1, 4, 6, 9, 0]; 
 
 
-console.log(supplyChangesInt[1]+supplyChangesInt[3]);
 
-var totalParts;
 
-for (let i = 0; i<supplyChangesInt.length; i++){
-    totalParts = (totalParts + supplyChanges);
-    console.log(totalParts);
+var totalParts =0;
+
+for (let i = 0; i<supplyChanges.length; i++){
+    totalParts = (totalParts + supplyChanges[i]);
+    
 }
 
+console.log(totalParts);
 
 
-for (values of supplyChanges) {
-  totalParts += supplyChanges;
-}
+
+
 //console.log(totalParts);
 
 // 9. We have a large stash of parts in our warehouse that we 
@@ -148,6 +149,33 @@ for (values of supplyChanges) {
 //    "left over," and the value of 'boxesFilled' should reflect
 //    how many boxes were filled.
 console.log('9. Filling boxes with a "while" loop');
+
+let parts = 572;
+let boxesFilled = 0;
+
+
+
+let index = 0;
+const max = 10;
+let leftovers = 0;
+
+while (index < parts){
+  if (index % 7 === 0){
+    boxesFilled ++ ;
+    
+
+  }
+  else{
+  leftovers = index % 7;
+  }
+  index++ 
+}
+parts = leftovers + 1;
+console.log("Boxes Filled are: ",boxesFilled -1);
+console.log("Leftover parts are:", parts);
+
+
+
 
 
 
